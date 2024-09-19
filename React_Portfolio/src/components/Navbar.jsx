@@ -44,7 +44,7 @@ const Navbar = () => {
                 {menu.name}
               </a>
               {/* Underline on hover only */}
-              <span className="absolute bottom-0 left-0 w-0 h-[3px] bg-[#c5a3db] group-hover:w-full transition-all duration-500"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-[3px] bg-cyan-500 group-hover:w-full transition-all duration-500"></span>
             </li>
           ))}
         </ul>
