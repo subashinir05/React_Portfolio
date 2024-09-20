@@ -18,7 +18,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="relative bg-white py-16 px-6 lg:px-12">
+    <section id="about" className="relative bg-gray-50 py-16 px-6 lg:px-12">
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         {/* Left: Introduction and education section */}
         <div className="w-full lg:w-1/2 space-y-8 text-center lg:text-left flex flex-col justify-center">
