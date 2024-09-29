@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import image3 from "../assets/images/image3.png";
-import { FaLinkedin, FaGithub, FaEnvelope, FaDownload } from 'react-icons/fa';
-import { SiLeetcode } from 'react-icons/si';
+import { FaLinkedin, FaGithub, FaEnvelope, FaDownload } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 const Home = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -10,24 +10,23 @@ const Home = () => {
     { icon: <FaLinkedin />, label: "LinkedIn" },
     { icon: <FaGithub />, label: "GitHub" },
     { icon: <SiLeetcode />, label: "LeetCode" },
-    { icon: <FaEnvelope />, label: "Email" }
+    { icon: <FaEnvelope />, label: "Email" },
   ];
 
-  // Circle Shape with cyan glow and gradient border
   const imgContainerStyle = {
     position: "relative",
     width: "300px",
     height: "300px",
     overflow: "hidden",
-    borderRadius: "50%", // Circle shape
+    borderRadius: "50%",
     border: isHovered
-      ? "6px solid linear-gradient(45deg, #00bcd4, #00acc1)" // Cyan gradient border on hover
-      : "3px solid #e0e0e0", // Normal border
+      ? "6px solid linear-gradient(45deg, #00bcd4, #00acc1)"
+      : "3px solid #e0e0e0",
     boxShadow: isHovered
-      ? "0 12px 24px rgba(0, 188, 212, 0.4), 0 0 15px rgba(0, 188, 212, 0.8)" // Cyan glow on hover
-      : "0 12px 24px rgba(0, 188, 212, 0.4)", // Regular cyan glow
+      ? "0 12px 24px rgba(0, 188, 212, 0.4), 0 0 15px rgba(0, 188, 212, 0.8)"
+      : "0 12px 24px rgba(0, 188, 212, 0.4)",
     backgroundColor: "#fff",
-    transition: "all 0.4s ease", // Smooth transition for border, shadow, etc.
+    transition: "all 0.4s ease",
   };
 
   const imgStyle = {
@@ -35,9 +34,11 @@ const Home = () => {
     width: "100%",
     height: "100%",
     objectFit: "cover",
-    filter: isHovered ? "brightness(1.0) saturate(1.0)" : "brightness(1) saturate(1)",
-    transform: isHovered ? "scale(1.08)" : "scale(1)", // Slightly larger on hover
-    borderRadius: "50%", // Make sure the image stays circular
+    filter: isHovered
+      ? "brightness(1.0) saturate(1.0)"
+      : "brightness(1) saturate(1)",
+    transform: isHovered ? "scale(1.08)" : "scale(1)",
+    borderRadius: "50%",
   };
 
   const overlayStyle = {
@@ -46,10 +47,11 @@ const Home = () => {
     left: 0,
     width: "100%",
     height: "100%",
-    background: "linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.3))",
+    background:
+      "linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.3))",
     transition: "opacity 0.4s ease",
-    opacity: isHovered ? 0.2 : 0, // A subtle overlay on hover
-    borderRadius: "inherit", // Inherit from the container
+    opacity: isHovered ? 0.2 : 0,
+    borderRadius: "inherit",
   };
 
   return (
@@ -69,11 +71,11 @@ const Home = () => {
       </div>
       <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
         <h1 className="text-4xl font-bold text-gray-700 mb-4">
-          <span className="block text-gray-700">Hello!</span>
-          I am <span className="text-cyan-500">Subashini Ramasamy</span>
+          <span className="block text-gray-700">Hello!</span>I am{" "}
+          <span className="text-cyan-500">Subashini Ramasamy</span>
         </h1>
         <a
-          href="/path-to-your-resume.pdf" // Update this to the path of your resume file
+          href="/path-to-your-resume.pdf"
           download
           className="flex items-center bg-gray-700 text-white py-2 px-4 rounded-lg shadow-md hover:bg-gray-400 transition duration-300"
         >

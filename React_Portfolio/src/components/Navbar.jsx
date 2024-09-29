@@ -25,8 +25,11 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 ease-in-out ${
-        sticky ? "bg-[#eceaf4] shadow-lg text-gray-800" : "bg-transparent text-gray-600"
-      }`}>
+        sticky
+          ? "bg-[#eceaf4] shadow-lg text-gray-800"
+          : "bg-transparent text-gray-600"
+      }`}
+    >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <div className="text-3xl font-extrabold tracking-tight cursor-pointer">
