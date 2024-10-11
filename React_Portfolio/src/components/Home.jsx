@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import image3 from "../assets/images/image3.png";
+import image3 from "../assets/images/img1.jpg";
 import { FaLinkedin, FaGithub, FaEnvelope, FaDownload } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 
@@ -7,10 +7,26 @@ const Home = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const social_media = [
-    { icon: <FaLinkedin />, label: "LinkedIn" },
-    { icon: <FaGithub />, label: "GitHub" },
-    { icon: <SiLeetcode />, label: "LeetCode" },
-    { icon: <FaEnvelope />, label: "Email" },
+    {
+      icon: <FaLinkedin />,
+      label: "LinkedIn",
+      url: "https://www.linkedin.com/in/subashini-r-3516282b2",
+    },
+    {
+      icon: <FaGithub />,
+      label: "GitHub",
+      url: "https://github.com/subashinir05",
+    },
+    {
+      icon: <SiLeetcode />,
+      label: "LeetCode",
+      url: "https://leetcode.com/u/subashinir05/",
+    },
+    {
+      icon: <FaEnvelope />,
+      label: "Email",
+      url: "mailto:subashinir05@gmail.com",
+    },
   ];
 
   const imgContainerStyle = {
@@ -30,15 +46,11 @@ const Home = () => {
   };
 
   const imgStyle = {
-    transition: "transform 0.4s ease, filter 0.4s ease",
     width: "100%",
     height: "100%",
     objectFit: "cover",
-    filter: isHovered
-      ? "brightness(1.0) saturate(1.0)"
-      : "brightness(1) saturate(1)",
-    transform: isHovered ? "scale(1.08)" : "scale(1)",
     borderRadius: "50%",
+    transition: "transform 0.4s ease",
   };
 
   const overlayStyle = {
@@ -64,6 +76,7 @@ const Home = () => {
           style={imgContainerStyle}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
+          className="w-1/2 sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4"
         >
           <img src={image3} alt="Description of the image" style={imgStyle} />
           <div style={overlayStyle}></div>
@@ -75,7 +88,7 @@ const Home = () => {
           <span className="text-cyan-500">Subashini Ramasamy</span>
         </h1>
         <a
-          href="/path-to-your-resume.pdf"
+          href="/Resume.pdf"
           download
           className="flex items-center bg-gray-700 text-white py-2 px-4 rounded-lg shadow-md hover:bg-gray-400 transition duration-300"
         >

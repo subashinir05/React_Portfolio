@@ -1,5 +1,5 @@
 import React from "react";
-import image3 from "../assets/images/image3.png";
+import image3 from "../assets/images/img6.jpg";
 
 const About = () => {
   const education = [
@@ -59,13 +59,17 @@ const About = () => {
 
         {/* Right: Profile Image */}
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-          <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-lg transform hover:scale-105 transition duration-500 ease-in-out">
+          <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-lg transition-transform transform hover:scale-105 duration-500 ease-in-out">
             <img
               src={image3}
               alt="Subashini Ramasamy"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-full"
+              style={{
+                boxShadow: "0px 0px 25px 5px rgba(0, 188, 212, 0.5)",
+                border: "6px solid #E0F7FA",
+              }}
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-200 to-blue-400 opacity-60 hover:opacity-30 transition duration-500"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-400 opacity-40 rounded-full hover:opacity-20 transition duration-500"></div>
           </div>
         </div>
       </div>
