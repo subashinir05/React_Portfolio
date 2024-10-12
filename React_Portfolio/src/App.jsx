@@ -5,7 +5,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Project from "./components/Project";
 import Achievements from "./components/Achievements";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
       <Skills />
       <Project />
       <Achievements />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
