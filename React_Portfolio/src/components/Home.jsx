@@ -95,14 +95,17 @@ const Home = () => {
           <FaDownload className="mr-2" /> Resume
         </a>
         <div className="mt-8 text-2xl flex items-center justify-center md:justify-start gap-6 text-gray-600">
-          {social_media.map(({ icon, label }) => (
-            <div
+          {social_media.map(({ icon, label, url }) => (
+            <a
               key={label}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="transition-transform duration-300 transform hover:scale-125 cursor-pointer"
               aria-label={label}
             >
               {icon}
-            </div>
+            </a>
           ))}
         </div>
       </div>
