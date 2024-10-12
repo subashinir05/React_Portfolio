@@ -88,7 +88,7 @@ const Home = () => {
           <span className="text-cyan-500">Subashini Ramasamy</span>
         </h1>
         <a
-          href="https://raw.githubusercontent.com/subashinir05/React_Portfolio/main/public/Resume.pdf"
+          href="https://raw.githubusercontent.com/subashinir05/React_Portfolio/main/React_Portfolio/public/Resume.pdf"
           download
           className="flex items-center bg-gray-700 text-white py-2 px-4 rounded-lg shadow-md hover:bg-gray-400 transition duration-300"
         >
