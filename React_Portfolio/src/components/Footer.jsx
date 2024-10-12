@@ -7,12 +7,14 @@ const Footer = () => {
       <div className="mt-2">
         <a
           href="https://www.linkedin.com/in/subashini-r-3516282b2"
+          target="_blank"
           className="text-white hover:underline mx-2"
         >
           LinkedIn
         </a>
         <a
           href="https://github.com/subashinir05"
+          target="_blank" 
           className="text-white hover:underline mx-2"
         >
           GitHub
