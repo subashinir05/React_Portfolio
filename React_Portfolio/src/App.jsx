@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Project from "./components/Project";
-// import Achievements from "./components/Achievements";
+import Achievements from "./components/Achievements";
 // import Footer from "./components/Footer";
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
       <About />
       <Skills />
       <Project />
-      {/* <Achievements /> */}
+      <Achievements />
       {/* <Footer /> */}
     </div>
   );
