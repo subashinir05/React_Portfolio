@@ -57,7 +57,7 @@ const Skills = () => {
         </div>
 
         {/* Areas of Interest Section*/}
-        <div className="w-full lg:w-1/2 bg-white shadow-md p-8 rounded-lg text-center flex flex-col items-center lg:w-2/3 min-h-[400px]"> 
+        <div className="w-full bg-white shadow-md p-8 rounded-lg text-center flex flex-col items-center lg:w-2/3 min-h-[400px]"> 
           <h3 className="text-2xl font-bold text-gray-700 mb-5">Areas of Interest</h3>
 
           <div className="mt-6 flex flex-col lg:grid lg:grid-cols-2 lg:gap-4">
