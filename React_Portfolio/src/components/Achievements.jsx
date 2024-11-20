@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import achievement1 from "../assets/images/ac1.jpg";
 import achievement2 from "../assets/images/ac2.jpg";
 import achievement3 from "../assets/images/PG Conf 2.png";
@@ -18,6 +18,7 @@ import achievement16 from "../assets/images/UG Idea.jpg";
 import achievement17 from "../assets/images/UG POC.jpg";
 
 const Achievements = () => {
+  const [showAll, setShowAll] = useState(false); // State to track visibility
   const achievements = [
     {
       img: achievement1,
@@ -126,7 +127,7 @@ const Achievements = () => {
   return (
     <section
       id="achievements"
-      className="min-h-screen py-28 bg-gray-50 flex flex-col justify-center"
+      className="min-h-screen py-16 bg-gray-50 flex flex-col justify-center"
     >
       <div className="text-center mb-12">
         <h3 className="text-3xl font-bold text-gray-700">My Achievements</h3>
@@ -134,29 +135,43 @@ const Achievements = () => {
           Proud moments of my journey
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-5 mx-auto max-w-6xl">
-        {achievements.map((achievement, i) => (
-          <div
-            key={i}
-            className="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105"
-          >
-            <img
-              src={achievement.img}
-              alt={achievement.title}
-              className="w-full h-48 object-cover"
-              style={{
-                borderTopLeftRadius: "0.5rem",
-                borderTopRightRadius: "0.5rem",
-              }}
-            />
-            <div className="p-4 bg-white">
-              <h3 className="text-xl font-semibold text-gray-800">
-                {achievement.title}
-              </h3>
-              <p className="text-gray-600">{achievement.description}</p>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 px-5 mx-auto max-w-6xl">
+        {/* Show only first 3 achievements initially, or all if 'showAll' is true */}
+        {(showAll ? achievements : achievements.slice(0, 3)).map(
+          (achievement, i) => (
+            <div
+              key={i}
+              className="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105"
+            >
+              <img
+                src={achievement.img}
+                alt={achievement.title}
+                className="w-full h-48 object-cover"
+                style={{
+                  borderTopLeftRadius: "0.5rem",
+                  borderTopRightRadius: "0.5rem",
+                }}
+              />
+              <div className="p-4 bg-white">
+                <h3 className="text-xl font-semibold text-gray-800">
+                  {achievement.title}
+                </h3>
+                <p className="text-gray-600">{achievement.description}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          )
+        )}
+      </div>
+
+      {/* Button to toggle showing all achievements */}
+      <div className="text-center mt-6">
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="px-4 py-3 text-white bg-gray-700 rounded-lg hover:bg-gray-400 transition-colors"
+        >
+          {showAll ? "Show Less <" : "Show More >"}
+        </button>
       </div>
     </section>
   );

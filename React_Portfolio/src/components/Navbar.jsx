@@ -28,6 +28,7 @@ const Navbar = () => {
           ? "bg-gradient-to-r from-[#b7d9e0] via-[#ffffff] to-[#dae2f0] shadow-lg text-gray-800"
           : "bg-transparent text-gray-600"
       }`}
+      aria-label="Navigation Menu"
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <div className="text-3xl font-bold tracking-tight cursor-pointer">
@@ -39,6 +40,7 @@ const Navbar = () => {
               <a
                 href={menu.link}
                 className="py-2 px-5 font-semibold text-gray-700 transition-colors duration-300 hover:text-cyan-500"
+                aria-label={menu.name}
               >
                 {menu.name}
               </a>
@@ -51,6 +53,8 @@ const Navbar = () => {
             open ? "text-gray-800" : sticky ? "text-gray-800" : "text-gray-600"
           }`}
           onClick={() => setOpen(!open)}
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open ? "true" : "false"}
         >
           <ion-icon name={open ? "close" : "menu"}></ion-icon>
         </div>
@@ -69,6 +73,7 @@ const Navbar = () => {
                 <a
                   href={menu.link}
                   className="py-2 px-5 block transition-colors duration-300 hover:text-cyan-500"
+                  aria-label={menu.name}
                 >
                   {menu.name}
                 </a>

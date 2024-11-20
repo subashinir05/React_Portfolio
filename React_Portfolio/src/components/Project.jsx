@@ -101,14 +101,14 @@ const Project = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen py-16 md:py-28 bg-gray-50 flex flex-col justify-center"
+      className="min-h-screen py-12 md:py-28 bg-gray-50 flex flex-col justify-center"
     >
       <div className="text-center mb-8 px-4">
         <h3 className="text-2xl md:text-3xl font-semibold text-gray-800">
           My Projects
         </h3>
         <p className="text-gray-600 mt-2 text-base md:text-lg">
-          Explore my awesome works
+          Explore my Creative works
         </p>
       </div>
       <div className="flex max-w-6xl gap-6 px-4 md:px-5 mx-auto w-full flex-grow">

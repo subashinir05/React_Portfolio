@@ -69,24 +69,31 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex py-12 md:flex-row flex-col items-center bg-gray-50"
+      className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-gray-50 py-8 px-4 pt-20 relative"
     >
-      <div className="flex-1 flex items-center justify-center h-full">
+      {/* Image Section - Displayed First */}
+      <div className="flex-1 flex justify-center items-center order-1 md:order-none mb-8 md:mb-0">
         <div
           style={imgContainerStyle}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          className="w-1/2 sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4"
+          className="w-2/3 sm:w-1/2 md:w-1/3 lg:w-1/4"
         >
-          <img src={image3} alt="Description of the image" style={imgStyle} />
+          <img src={image3} alt="Subashini Ramasamy" style={imgStyle} />
           <div style={overlayStyle}></div>
         </div>
       </div>
+
+      {/* Content Section */}
       <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
-        <h1 className="text-4xl font-bold text-gray-700 mb-4">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-700 mb-4">
           <span className="block text-gray-700">Hello!</span>I am{" "}
           <span className="text-cyan-500">Subashini Ramasamy</span>
         </h1>
+        <p className="text-base sm:text-lg text-gray-600 mb-6 leading-6 sm:leading-8">
+          A passionate developer skilled in <b>Java</b>, <b>ReactJS</b>, and{" "}
+          <b>Machine Learning</b>. Let's create something amazing together!
+        </p>
         <a
           href="https://raw.githubusercontent.com/subashinir05/React_Portfolio/main/React_Portfolio/public/Resume.pdf"
           download
@@ -94,8 +101,7 @@ const Home = () => {
         >
           <FaDownload className="mr-2" /> Resume
         </a>
-
-        <div className="mt-8 text-2xl flex items-center justify-center md:justify-start gap-6 text-gray-600">
+        <div className="mt-8 text-xl sm:text-2xl flex items-center justify-center md:justify-start gap-6 text-gray-600">
           {social_media.map(({ icon, label, url }) => (
             <a
               key={label}

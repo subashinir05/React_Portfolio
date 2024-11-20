@@ -4,11 +4,11 @@ import { FaDatabase, FaBrain, FaCogs, FaNetworkWired } from "react-icons/fa";
 const Skills = () => {
   const skills = [
     { name: "Java", count: 80 },
+    { name: "React", count: 75 },
     { name: "Python", count: 70 },
     { name: "SQL", count: 65 },
     { name: "API", count: 60 },
-    { name: "React", count: 50 },
-    { name: "MERN Stack", count: 40 },
+    { name: "MERN Stack", count: 50 },
   ];
 
   const interests = [
